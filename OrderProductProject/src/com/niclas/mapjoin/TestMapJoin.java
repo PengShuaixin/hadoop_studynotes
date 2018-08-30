@@ -18,7 +18,7 @@ import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 public class TestMapJoin {
 	public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
 		Configuration configuration = new Configuration();
-		Job job = Job .getInstance(configuration,"MapJoin");
+		Job job = Job.getInstance(configuration,"MapJoin");
 		job.setJarByClass(TestMapJoin.class);
 		job.setMapperClass(MapJionMapper.class);
 		job.setNumReduceTasks(0);
@@ -40,7 +40,7 @@ public class TestMapJoin {
 		@Override
 		protected void setup(Mapper<LongWritable, Text, Text, NullWritable>.Context context)
 				throws IOException, InterruptedException {
-			FileReader fileReader = new FileReader("product.txt");
+			FileReader fileReader = new FileReader("Product.txt");
 			BufferedReader bufferedReader = new BufferedReader(fileReader);
 			String line;
 			while (null != (line = bufferedReader.readLine())) {

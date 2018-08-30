@@ -3,7 +3,7 @@ package com.niclas.hdfs;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-//单点测试写法
+//单点测试
 public class TestUnit {
 	@Before
 	public void before() {

@@ -18,8 +18,8 @@ public class Comparator extends WritableComparator {
 		ClassBean abean = (ClassBean) a;
 		ClassBean bbean = (ClassBean) b;
 		
-		//比较两个bean时，指定只比较bean中的grade
-		return abean.getGrade().compareTo(bbean.getGrade());		
+		//比较两个bean时，指定只比较bean中的
+		return abean.getClass_id().compareTo(bbean.getClass_id());		
 	}
 
 }

@@ -12,7 +12,12 @@ import org.apache.hadoop.mapreduce.Mapper;
 import org.apache.hadoop.mapreduce.Reducer;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
-
+/*
+ * 1.重写map方法，将班级和成绩封装成一个bean，作为map的key输出
+ * 2.map作为key时，需要实现WritableComparable接口
+ * 3.重写WritableComparable，将班级id相同的合并
+ * 4.输出到reduce，重写Partitioner方法，分类输出到文件
+ */
 
 public class TestClass {
 	public static void main(String[] args) throws IllegalArgumentException, IOException, ClassNotFoundException, InterruptedException {
@@ -41,7 +46,7 @@ public class TestClass {
 		//指定自定义数据分区器
 		job.setPartitionerClass(ClassPartitioner.class);
 		//指定相应“分区”数量的reducetask
-		job.setNumReduceTasks(6);
+		job.setNumReduceTasks(5);
 		//8.提交job执行
 //		job.submit();
 		boolean falag = job.waitForCompletion(true);

@@ -44,9 +44,9 @@ public class TestClass {
 		//在此设置自定义的Groupingcomparator类 
 		job.setGroupingComparatorClass(Comparator.class);
 		//指定自定义数据分区器
-		job.setPartitionerClass(ClassPartitioner.class);
-		//指定相应“分区”数量的reducetask
-		job.setNumReduceTasks(5);
+//		job.setPartitionerClass(ClassPartitioner.class);
+//		//指定相应“分区”数量的reducetask
+//		job.setNumReduceTasks(5);
 		//8.提交job执行
 //		job.submit();
 		boolean falag = job.waitForCompletion(true);

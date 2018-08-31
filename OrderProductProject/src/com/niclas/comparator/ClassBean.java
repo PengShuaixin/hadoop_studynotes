@@ -21,8 +21,6 @@ public class ClassBean implements WritableComparable<ClassBean>{
 		
 	}
 
-
-	
 	public Text getClass_id() {
 		return class_id;
 	}

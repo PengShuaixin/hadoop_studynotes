@@ -14,7 +14,7 @@ import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 /*
  *1.1 统计不同用途车辆的数量分布
- *Mapper中车辆用途作为key，value=1
+ *Mapper中车辆用途作为key，value为1
  *在Reduce进行累加计算
  */
 public class CountUse {

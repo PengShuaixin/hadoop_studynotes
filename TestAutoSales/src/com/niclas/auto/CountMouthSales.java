@@ -1,6 +1,6 @@
 package com.niclas.auto;
 /*
- * 输出每个月汽车销售数量比例
+ * 1.2输出每个月汽车销售数量的百分比
  */
 import java.io.IOException;
 import java.text.DecimalFormat;

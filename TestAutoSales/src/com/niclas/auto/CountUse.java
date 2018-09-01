@@ -17,13 +17,13 @@ import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
  *Mapper中车辆用途作为key，value=1
  *在Reduce进行累加计算
  */
-public class CountMapReduce {
+public class CountUse {
 
 	public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {
 		// TODO Auto-generated method stub
 		Configuration conf = new Configuration();
 		Job job = Job.getInstance(conf);
-		job.setJarByClass(CountMapReduce.class);
+		job.setJarByClass(CountUse.class);
 		
 		job.setMapperClass(CountMapper.class);
 		job.setReducerClass(CountReduce.class);

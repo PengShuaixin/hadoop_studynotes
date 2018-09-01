@@ -5,7 +5,9 @@ import java.io.DataOutput;
 import java.io.IOException;
 
 import org.apache.hadoop.io.WritableComparable;
-
+/*
+ * 1.3市、区封装成对象，实现WritableComparable接口作为key
+ */
 public class AreaBean implements WritableComparable<AreaBean>{
 	private String city;
 	private String area;

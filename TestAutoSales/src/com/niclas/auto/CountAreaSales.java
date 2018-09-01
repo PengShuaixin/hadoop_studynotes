@@ -12,7 +12,9 @@ import org.apache.hadoop.mapreduce.Mapper;
 import org.apache.hadoop.mapreduce.Reducer;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
-
+/*
+ * 1.3市、区的销售情况
+ */
 public class CountAreaSales {
 
 	public static void main(String[] args) throws IOException, ClassNotFoundException, InterruptedException {

@@ -23,7 +23,7 @@ public class CountCarsSales {
 		Job job = Job.getInstance(conf);
 		//设置Mapper和Reducer
 		job.setMapperClass(CountMapper.class);
-		job.setReducerClass(CountReduce.class);
+		job.setReducerClass(CountReducer.class);
 		//设置Map的输出类型
 		job.setMapOutputKeyClass(CarsBean.class);
 		job.setMapOutputValueClass(IntWritable.class);
@@ -68,7 +68,7 @@ public class CountCarsSales {
 		
 	}
 	
-	public static class CountReduce extends Reducer<CarsBean, IntWritable, CarsBean, IntWritable> {
+	public static class CountReducer extends Reducer<CarsBean, IntWritable, CarsBean, IntWritable> {
 
 		@Override
 		protected void reduce(CarsBean key, Iterable<IntWritable> value,

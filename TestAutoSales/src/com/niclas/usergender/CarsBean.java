@@ -59,17 +59,16 @@ public class CarsBean implements WritableComparable<CarsBean>{
 	public int compareTo(CarsBean o) {
 		// TODO Auto-generated method stub
 		if(this.ownership.equals(o.getOwnership())) {
-			if (this.brand.equals(o.getBrand())) {
-				return this.type.compareTo(o.getType());
-			}
-		}
-		if(this.ownership.equals(o.getOwnership())) {
 			if (this.type.equals(o.getType())) {
 				return this.brand.compareTo(o.getBrand());
+			}else {
+				return this.type.compareTo(o.getType());
 			}
+			
+		}else {
+			return this.ownership.compareTo(o.getOwnership());
 		}
-		return this.ownership.compareTo(o.getOwnership());
-		
+				
 	}
 	@Override
 	public String toString() {
